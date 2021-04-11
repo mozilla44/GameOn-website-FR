@@ -27,6 +27,7 @@ closeModal.forEach((span) => span.addEventListener("click" , hideModal))
 // close modal function
 function hideModal(){
   modalbg.style.display = "none";
+  modalbg.style.backgroundColor = "red";
 }
 
 
