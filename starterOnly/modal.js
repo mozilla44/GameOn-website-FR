@@ -11,7 +11,7 @@ function editNav() {
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
-const closeModal = document.querySelectorAll(".close")
+
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -22,16 +22,19 @@ function launchModal() {
 }
 
 // close modal event
-closeModal.forEach((span) => span.addEventListener("click" , hideModal))
+document.getElementById("close_modal").addEventListener("click" , hideModal)
 
 // close modal function
 function hideModal(){
   modalbg.style.display = "none";
-  modalbg.style.backgroundColor = "red";
 }
 
+//validate form 
 
-// REGEX
+var prenom = document.getElementById("first");
+var nom = document.getElementById("last");
+
+
 
 
 
