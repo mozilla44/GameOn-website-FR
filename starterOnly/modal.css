@@ -539,3 +539,8 @@ footer {
   }
 }
 
+#first_error,#last_error,#email_error,#birthdate_error,#quantity_error {
+  color: red;
+  font-size: 16px;
+  display: none;
+}
