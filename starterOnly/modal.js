@@ -31,9 +31,10 @@ function hideModal(){
 
 //validate form 
 
-var prenom = document.getElementById("first");
-var nom = document.getElementById("last");
-
+var prenom = document.getElementById("first").value;
+var nom = document.getElementById("last").value;
+console.log(prenom)
+console.log(nom)
 
 
 
