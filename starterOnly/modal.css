@@ -28,6 +28,9 @@ p {
 img {
   padding-right: 1rem;
 }
+.hero-img {
+  object-fit: cover;
+}
 
 .topnav {
   overflow: hidden;
