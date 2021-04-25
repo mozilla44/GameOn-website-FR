@@ -50,7 +50,7 @@ function validate (){
     document.getElementById("email_error").style.display = "block";
     
   }
-  if (firstName == "" || astName == "" || emailAdress == "" ){
+  if (firstName == "" || lastName == "" || emailAdress == "" ){
     return false
   }
 }
@@ -60,7 +60,7 @@ function validate (){
 
 // validation reussie 
 
-function isValid() {
+function modalValid() {
   alert("c'est un test")
 }
 
