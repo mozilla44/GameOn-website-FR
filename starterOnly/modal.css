@@ -28,6 +28,9 @@ p {
 img {
   padding-right: 1rem;
 }
+.hero-img img {
+  object-fit: cover;
+}
 
 .topnav {
   overflow: hidden;
@@ -110,6 +113,32 @@ img {
     float: right;
     display: block;
     margin-top: -15px;
+  }
+  .main-navbar{
+    margin: 0px;
+  }
+  .main-navbar .icon{
+    margin: 0em;
+    padding-top: 1.3em;
+  }
+  .header-logo{
+    max-width: 80%;
+  }
+  .hero-headline{
+    
+    font-size: 1.5em  !important;
+    max-width: 80vw  !important;
+    text-align: center;
+  }
+  .hero-text{
+    
+    font-size: 0.8em  !important;
+    max-width: 80vw  !important;
+    text-align: center;
+    margin-top: 1em  !important;
+  }
+  .hero-content{
+    padding: 0 !important;
   }
 } 
 
@@ -543,4 +572,11 @@ footer {
   color: red;
   font-size: 16px;
   display: none;
+}
+
+@media all and (min-width: 801px) and (max-width: 950px){
+  .hero-headline{
+    white-space: normal;
+    width: 80vw !important;
+  }
 }
