@@ -28,7 +28,7 @@ p {
 img {
   padding-right: 1rem;
 }
-.hero-img {
+.hero-img img {
   object-fit: cover;
 }
 
@@ -114,20 +114,23 @@ img {
     display: block;
     margin-top: -15px;
   }
-  #myTopnav {
-    border: 3px solid red;
-  }
-  .header-logo{
-    border: 3px solid blue
-  }
   .main-navbar{
-    border: 3px solid green;
     margin: 0px;
   }
   .main-navbar .icon{
-    border: 3px solid salmon;
     margin: 0em;
     padding-top: 1.3em;
+  }
+  .header-logo{
+    max-width: 80%;
+  }
+  .hero-headline{
+    text-align: center;
+    border: 3px solid red;
+    font-size: 2em;
+  }
+  .hero-content{
+    padding: 0 !important;
   }
 } 
 
