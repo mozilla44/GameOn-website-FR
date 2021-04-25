@@ -125,9 +125,17 @@ img {
     max-width: 80%;
   }
   .hero-headline{
+    
+    font-size: 1.5em  !important;
+    max-width: 80vw  !important;
     text-align: center;
-    border: 3px solid red;
-    font-size: 2em;
+  }
+  .hero-text{
+    
+    font-size: 0.8em  !important;
+    max-width: 80vw  !important;
+    text-align: center;
+    margin-top: 1em  !important;
   }
   .hero-content{
     padding: 0 !important;
