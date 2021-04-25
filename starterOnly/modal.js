@@ -28,17 +28,41 @@ document.getElementById("close_modal").addEventListener("click" , hideModal)
 function hideModal(){
   modalbg.style.display = "none";
 }
+// get input values
+let firstName = document.getElementById("first").value;
+let lastName = document.getElementById("last").value;
+let emailAdress = document.getElementById("email").value;
+let birthDate = document.getElementById("birthdate").value;
+let numberOfEvents = document.getElementById("quantity").value;
 
-//validate form 
+//validate form fuction 
 
-var prenom = document.getElementById("first").value;
-var nom = document.getElementById("last").value;
-console.log(prenom)
-console.log(nom)
+function validate (){
+  if (firstName == ""){
+    document.getElementById("first_error").style.display = "block";
+    
+  }
+  if (lastName == ""){
+    document.getElementById("last_error").style.display = "block";
+    
+  }
+  if (emailAdress == ""){
+    document.getElementById("email_error").style.display = "block";
+    
+  }
+  if (firstName == "" || astName == "" || emailAdress == "" ){
+    return false
+  }
+}
 
 
 
 
+// validation reussie 
+
+function isValid() {
+  alert("c'est un test")
+}
 
 
 
