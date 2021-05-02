@@ -580,3 +580,32 @@ footer {
     width: 80vw !important;
   }
 }
+
+#form_success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width : 50%;
+  height : 50%;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  right: 25%;
+  z-index: 10;
+  background-color: white;
+  display: none;
+}
+
+#close_sucess {
+  width: 20%;
+  height: 10%;
+  border-radius: 15px;
+  text-decoration: none;
+  border: none;
+  background-color: #FF2600;
+  color: white;
+  font-size: 0.6em;
+  margin-top: 1em;
+  cursor: pointer;
+}

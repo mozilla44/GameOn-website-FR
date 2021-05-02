@@ -64,5 +64,8 @@ function modalValid() {
   alert("c'est un test")
 }
 
-
-
+let successBtn = document.getElementById("close_sucess")
+successBtn.addEventListener("click" , hideSuccess)
+function hideSuccess(){
+  document.getElementById("form_success").style.display = "none"
+}
