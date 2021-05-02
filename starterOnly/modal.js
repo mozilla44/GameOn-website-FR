@@ -36,11 +36,18 @@ let emailAdress = document.getElementById("email").value;
 let birthDate = document.getElementById("birthdate").value;
 let numberOfEvents = document.getElementById("quantity").value;
 
+
+// regex 
+let regexFirst = [A-Z][a-z]*
+let regexSecond = [A-Z][a-z]*
+let regexEmail = 
+
+let formRegex = []
+
 //validate form fuction 
 
-/* document.querySelectorAll(".text-control").addEventListener("input" , validate)
- */
-
+ document.querySelectorAll(".text-control").addEventListener("input" , validate)
+ 
 
 function validate (){
   if (firstName == ""){
@@ -49,7 +56,6 @@ function validate (){
       errorMsgFirst.innerHTML= "veuillez entrer un prénom valide"
       errorMsgFirst.setAttribute("class" , "error_mssg")
 			inputFirst.appendChild(errorMsgFirst);
-      
     }
   if (lastName == ""){
     let inputLast = document.getElementById("input_last");
@@ -57,7 +63,6 @@ function validate (){
     errorMsgLast.innerHTML= "veuillez entrer un nom valide"
     errorMsgLast.setAttribute("class" , "error_mssg")
 		inputLast.appendChild(errorMsgLast);
-    
   }
   if (emailAdress == ""){
     let inputEmail = document.getElementById("input_email");
@@ -65,20 +70,16 @@ function validate (){
     errorMsgEmail.innerHTML= "veuillez entrer une adresse email valide"
     errorMsgEmail.setAttribute("class" , "error_mssg")
 		inputEmail.appendChild(errorMsgEmail);
-    
-    
   }
   if (firstName == "" || lastName == "" || emailAdress == "" ){
     return false
   }
 }
-
-
 // validation reussie 
+
 
 //success message 
 function hideSuccess(){
   document.getElementById("form_success").style.display = "none"
 }
 
-append ()
