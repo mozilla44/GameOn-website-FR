@@ -28,6 +28,7 @@ document.getElementById("close_modal").addEventListener("click" , hideModal)
 function hideModal(){
   modalbg.style.display = "none";
 }
+
 // get input values
 let firstName = document.getElementById("first").value;
 let lastName = document.getElementById("last").value;
@@ -37,11 +38,13 @@ let numberOfEvents = document.getElementById("quantity").value;
 
 //validate form fuction 
 
+document.querySelectorAll(".text-control").addEventListener("input" , validate)
+
+let formRegex = []
+
 function validate (){
   if (firstName == ""){
-    document.getElementById("first_error").style.display = "block";
-    
-  }
+    let 
   if (lastName == ""){
     document.getElementById("last_error").style.display = "block";
     
@@ -54,8 +57,6 @@ function validate (){
     return false
   }
 }
-
-
 
 
 // validation reussie 
