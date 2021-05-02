@@ -38,19 +38,34 @@ let numberOfEvents = document.getElementById("quantity").value;
 
 //validate form fuction 
 
-document.querySelectorAll(".text-control").addEventListener("input" , validate)
+/* document.querySelectorAll(".text-control").addEventListener("input" , validate)
+ */
 
-let formRegex = []
 
 function validate (){
   if (firstName == ""){
-    let 
+      let inputFirst = document.getElementById("input_first");
+    	let errorMsgFirst = document.createElement("p");
+      errorMsgFirst.innerHTML= "veuillez entrer un prénom valide"
+      errorMsgFirst.setAttribute("class" , "error_mssg")
+			inputFirst.appendChild(errorMsgFirst);
+      
+    }
   if (lastName == ""){
-    document.getElementById("last_error").style.display = "block";
+    let inputLast = document.getElementById("input_last");
+    let errorMsgLast = document.createElement("p");
+    errorMsgLast.innerHTML= "veuillez entrer un nom valide"
+    errorMsgLast.setAttribute("class" , "error_mssg")
+		inputLast.appendChild(errorMsgLast);
     
   }
   if (emailAdress == ""){
-    document.getElementById("email_error").style.display = "block";
+    let inputEmail = document.getElementById("input_email");
+    let errorMsgEmail = document.createElement("p");
+    errorMsgEmail.innerHTML= "veuillez entrer une adresse email valide"
+    errorMsgEmail.setAttribute("class" , "error_mssg")
+		inputEmail.appendChild(errorMsgEmail);
+    
     
   }
   if (firstName == "" || lastName == "" || emailAdress == "" ){
@@ -65,3 +80,5 @@ function validate (){
 function hideSuccess(){
   document.getElementById("form_success").style.display = "none"
 }
+
+append ()
