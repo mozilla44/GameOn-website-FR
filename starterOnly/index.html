@@ -52,6 +52,10 @@
 
     <section class="bground">
       <div class="content">
+        <div id="form_success">
+          <p id="success_message">Merci ! Votre réservation a été reçue.</p>
+          <button id="close_sucess" onclick="hideModal()">Fermer</button>
+        </div>
         <span class="close" id="close_modal"></span>
         <div class="modal-body">
           <form name="reserve" action="index.html" method="get" onsubmit="return validate();">
