@@ -43,14 +43,47 @@ let regexEmail = /^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]­{1}[a-z0
 let regexBirthdate = /\d/;
 let regexQuantity= /^\d{1,2}$/;
 
-let formRegex = []
+//test regex
+let testFirst = regexName.test(firstName)
+let testLast = regexName.test(lastName)
+let testEmail = regexEmail.test(emailAdress)
+let testBirthdate = regexBirthdate.test(birthDate)
+let testQuantity = regexQuantity.test(numberOfEvents)
+
 
 //validate form fuction 
 
- document.querySelectorAll(".text-control").addEventListener("input" , validate)
+ 
+function validate (){
+  
+  if (testFirst == false){
+    let inputFirst = document.getElementById("input_first");
+    	let errorMsgFirst = document.createElement("p");
+      errorMsgFirst.innerHTML= "veuillez entrer un prénom valide"
+      errorMsgFirst.setAttribute("class" , "error_mssg")
+			inputFirst.appendChild(errorMsgFirst);
+      return false;
+  }
+  if (testLast == false){
+    let inputLast = document.getElementById("input_last");
+    let errorMsgLast = document.createElement("p");
+    errorMsgLast.innerHTML= "veuillez entrer un nom valide"
+    errorMsgLast.setAttribute("class" , "error_mssg")
+		inputLast.appendChild(errorMsgLast);
+    return false;
+  }
+  if (testEmail == false){
+    let inputEmail = document.getElementById("input_email");
+    let errorMsgEmail = document.createElement("p");
+    errorMsgEmail.innerHTML= "veuillez entrer une adresse email valide"
+    errorMsgEmail.setAttribute("class" , "error_mssg")
+		inputEmail.appendChild(errorMsgEmail);
+    return false;
+  }
+}
  
 
-function validate (){
+/* function validate (){
   if (firstName == ""){
       let inputFirst = document.getElementById("input_first");
     	let errorMsgFirst = document.createElement("p");
@@ -75,7 +108,7 @@ function validate (){
   if (firstName == "" || lastName == "" || emailAdress == "" ){
     return false
   }
-}
+} */
 // validation reussie 
 
 
