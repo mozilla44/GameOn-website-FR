@@ -50,6 +50,12 @@ let testEmail = regexEmail.test(emailAdress)
 let testBirthdate = regexBirthdate.test(birthDate)
 let testQuantity = regexQuantity.test(numberOfEvents)
 
+// listen for changes 
+document.getElementById("first").addEventListener("change" , validate);
+document.getElementById("last").addEventListener("change" , validate)
+document.getElementById("email").addEventListener("change", validate)
+document.getElementById("birthdate").addEventListener("change" , validate)
+document.getElementById("quantity").addEventListener("change", validate);
 
 //validate form fuction 
 
@@ -62,7 +68,7 @@ function validate (){
       errorMsgFirst.innerHTML= "veuillez entrer un prénom valide"
       errorMsgFirst.setAttribute("class" , "error_mssg")
 			inputFirst.appendChild(errorMsgFirst);
-      return false;
+      
   }
   if (testLast == false){
     let inputLast = document.getElementById("input_last");
@@ -70,7 +76,7 @@ function validate (){
     errorMsgLast.innerHTML= "veuillez entrer un nom valide"
     errorMsgLast.setAttribute("class" , "error_mssg")
 		inputLast.appendChild(errorMsgLast);
-    return false;
+    
   }
   if (testEmail == false){
     let inputEmail = document.getElementById("input_email");
@@ -78,7 +84,10 @@ function validate (){
     errorMsgEmail.innerHTML= "veuillez entrer une adresse email valide"
     errorMsgEmail.setAttribute("class" , "error_mssg")
 		inputEmail.appendChild(errorMsgEmail);
-    return false;
+    
+  }
+  if (testFirst == false || testLast == false || testEmail == false ){
+    return false
   }
 }
  
