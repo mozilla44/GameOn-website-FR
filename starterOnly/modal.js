@@ -38,9 +38,10 @@ let numberOfEvents = document.getElementById("quantity").value;
 
 
 // regex 
-let regexFirst = [A-Z][a-z]*
-let regexSecond = [A-Z][a-z]*
-let regexEmail = 
+let regexName = /^\D{2,}$/;
+let regexEmail = /^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]­{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$/;
+let regexBirthdate = /\d/;
+let regexQuantity= /^\d{1,2}$/;
 
 let formRegex = []
 
