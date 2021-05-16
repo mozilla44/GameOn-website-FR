@@ -90,6 +90,10 @@ function validate (){
     document.getElementById("errorQuantity").style.display = "block";
     document.getElementById("errorQuantity").innerHTML = "Veuillez entrer un nombre valide";
   }
+  if (document.getElementById("checkbox1").checked == false){
+    document.getElementById("checkboxRequired").style.display = "block";
+    document.getElementById("checkboxRequired").innerHTML = "Veuillez accepter les conditions générales";
+  }
   if (testFirst == false || testLast == false || testEmail == false || testQuantity == false || testBirthdate == false){
     return false
   }
