@@ -102,13 +102,15 @@ function validate (){
   if (testFirst == false || testLast == false || testEmail == false || testQuantity == false || testBirthdate == false || document.getElementById("checkbox1").checked == false){
     return false
   }
-  if (testFirst == true && testLast == true && testEmail == true && testQuantity == true && testBirthdate == true && document.getElementById("checkbox1").checked == true){
+  /* if (testFirst == true && testLast == true && testEmail == true && testQuantity == true && testBirthdate == true && document.getElementById("checkbox1").checked == true){
     return true
-  }
+  } */
 }
+
  
 //success message 
 function hideSuccess(){
   document.getElementById("form_success").style.display = "none"
 }
+
 
