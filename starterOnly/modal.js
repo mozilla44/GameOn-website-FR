@@ -99,8 +99,11 @@ function validate (){
     document.getElementById("checkboxRequired").style.display = "block";
     document.getElementById("checkboxRequired").innerHTML = "Veuillez accepter les conditions générales";
   }
-  if (testFirst == false || testLast == false || testEmail == false || testQuantity == false || testBirthdate == false){
+  if (testFirst == false || testLast == false || testEmail == false || testQuantity == false || testBirthdate == false || document.getElementById("checkbox1").checked == false){
     return false
+  }
+  if (testFirst == true && testLast == true && testEmail == true && testQuantity == true && testBirthdate == true && document.getElementById("checkbox1").checked == true){
+    return true
   }
 }
  
