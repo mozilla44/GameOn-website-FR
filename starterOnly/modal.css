@@ -588,9 +588,10 @@ footer {
   justify-content: center;
   align-items: center;
   width: 80%;
-  height: 100%;
+  height: 100vh;
   position: relative;
   display: none;
+  
 }
 
 #success_message {
@@ -620,3 +621,8 @@ font-family: inherit;
   bottom: 1.5em;
 }
 
+.errorMesage {
+  color: red;
+  display: none;
+  font-size: 16px;
+}
