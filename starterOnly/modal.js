@@ -19,6 +19,9 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
+  if (window.matchMedia('(min-width: 801px)').matches){
+    modalbg.style.backgroundColor = "white";
+  }
 }
 
 // close modal event
