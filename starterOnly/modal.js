@@ -48,7 +48,7 @@ let numberOfEvents = document.getElementById("quantity").value;
 // regex 
 let regexName = /^\D{2,}$/;
 let regexEmail = /^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]­{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$/;
-let regexBirthdate = /\d/;
+let regexBirthdate = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/
 let regexQuantity= /^\d{1,2}$/;
 
 //test regex
@@ -71,64 +71,30 @@ document.getElementById("quantity").addEventListener("change", validate);
 function validate (){
   
   if (testFirst == false){
-    let inputFirst = document.getElementById("input_first");
-    	let errorMsgFirst = document.createElement("p");
-      errorMsgFirst.innerHTML= "veuillez entrer un prénom valide"
-      errorMsgFirst.setAttribute("class" , "error_mssg")
-			inputFirst.appendChild(errorMsgFirst);
-      
+    document.getElementById("errorFirst").style.display = "block";
+    document.getElementById("errorFirst").innerHTML = "Veuillez entrer un prénom valide";
   }
   if (testLast == false){
-    let inputLast = document.getElementById("input_last");
-    let errorMsgLast = document.createElement("p");
-    errorMsgLast.innerHTML= "veuillez entrer un nom valide"
-    errorMsgLast.setAttribute("class" , "error_mssg")
-		inputLast.appendChild(errorMsgLast);
-    
+    document.getElementById("errorLast").style.display = "block";
+    document.getElementById("errorLast").innerHTML = "Veuillez entrer un nom valide";
   }
   if (testEmail == false){
-    let inputEmail = document.getElementById("input_email");
-    let errorMsgEmail = document.createElement("p");
-    errorMsgEmail.innerHTML= "veuillez entrer une adresse email valide"
-    errorMsgEmail.setAttribute("class" , "error_mssg")
-		inputEmail.appendChild(errorMsgEmail);
-    
+    document.getElementById("errorEmail").style.display = "block";
+    document.getElementById("errorEmail").innerHTML = "Veuillez entrer une adresse e-mail valide";
   }
-  if (testFirst == false || testLast == false || testEmail == false ){
+  if (testBirthdate == false){
+    document.getElementById("errorBirthdate").style.display = "block";
+    document.getElementById("errorBirthdate").innerHTML = "Veuillez entrer une date valide";
+  }
+  if (testQuantity == false){
+    document.getElementById("errorQuantity").style.display = "block";
+    document.getElementById("errorQuantity").innerHTML = "Veuillez entrer un nombre valide";
+  }
+  if (testFirst == false || testLast == false || testEmail == false || testQuantity == false || testBirthdate == false){
     return false
   }
 }
  
-
-/* function validate (){
-  if (firstName == ""){
-      let inputFirst = document.getElementById("input_first");
-    	let errorMsgFirst = document.createElement("p");
-      errorMsgFirst.innerHTML= "veuillez entrer un prénom valide"
-      errorMsgFirst.setAttribute("class" , "error_mssg")
-			inputFirst.appendChild(errorMsgFirst);
-    }
-  if (lastName == ""){
-    let inputLast = document.getElementById("input_last");
-    let errorMsgLast = document.createElement("p");
-    errorMsgLast.innerHTML= "veuillez entrer un nom valide"
-    errorMsgLast.setAttribute("class" , "error_mssg")
-		inputLast.appendChild(errorMsgLast);
-  }
-  if (emailAdress == ""){
-    let inputEmail = document.getElementById("input_email");
-    let errorMsgEmail = document.createElement("p");
-    errorMsgEmail.innerHTML= "veuillez entrer une adresse email valide"
-    errorMsgEmail.setAttribute("class" , "error_mssg")
-		inputEmail.appendChild(errorMsgEmail);
-  }
-  if (firstName == "" || lastName == "" || emailAdress == "" ){
-    return false
-  }
-} */
-// validation reussie 
-
-
 //success message 
 function hideSuccess(){
   document.getElementById("form_success").style.display = "none"
