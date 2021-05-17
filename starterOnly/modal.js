@@ -64,6 +64,7 @@ document.getElementById("last").addEventListener("change" , validate)
 document.getElementById("email").addEventListener("change", validate)
 document.getElementById("birthdate").addEventListener("change" , validate)
 document.getElementById("quantity").addEventListener("change", validate);
+document.getElementById("checkbox1").addEventListener("change")
 
 //validate form fuction 
 
