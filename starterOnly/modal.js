@@ -47,14 +47,14 @@ let numberOfEvents = document.getElementById("quantity").value;
 
 // regex 
 /* let regexName = /^\D{2,}$/; */
-let regexEmail = /^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]­{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$/;
+/* let regexEmail = /^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]­{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$/; */
 let regexBirthdate = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/
 let regexQuantity= /^\d{1,2}$/;
 
 //test regex
 /* let testFirst = regexName.test(document.getElementById("first").value)
 let testLast = regexName.test(document.getElementById("last").value) */
-let testEmail = regexEmail.test(emailAdress)
+/* let testEmail = regexEmail.test(emailAdress) */
 let testBirthdate = regexBirthdate.test(birthDate)
 let testQuantity = regexQuantity.test(numberOfEvents)
 
@@ -72,9 +72,13 @@ document.getElementById("checkbox1").addEventListener("change")
 function validate(){
 	let regexName = /^\D{2,}$/;
   let regexEmail = /^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]­{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$/;
+  let regexBirthdate = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/
 	let testFirst = regexName.test(document.getElementById("first").value);
   let testLast = regexName.test(document.getElementById("last").value);
   let testEmail = regexEmail.test(document.getElementById("email").value)
+  let testBirthdate = regexBirthdate.test(document.getElementById("birthdate").value)
+  
+
 
 	if (testFirst == false){
     	document.getElementById("errorFirst").innerHTML = "Veuillez entrer un prénom valide";
@@ -94,6 +98,13 @@ function validate(){
   }
   else {
     document.getElementById("errorEmail").style.display = "none" , document.getElementById("email").style.border = "2px solid green"
+  }
+  if (testBirthdate == false){
+    document.getElementById("errorBirthdate").innerHTML = "veuillez entrer une date valide";
+    document.getElementById("birthdate").style.border = "2px solid red"
+  }
+  else {
+    document.getElementById("errorBirthdate").style.display = "none" , document.getElementById("birthdate").style.border = "2px solid green"
   }
   
 }
