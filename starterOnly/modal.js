@@ -109,10 +109,13 @@ function validate(){
   }
 
   if (testFirst == false || testLast == false || testEmail == false || testBirthdate == false || testQuantity == false || checkbox.checked == false){
-    return false 
+    return false
   }
-  
+  else {
+    return true
+  }
 }
+
 
  
 //success message 
