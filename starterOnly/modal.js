@@ -48,14 +48,14 @@ let numberOfEvents = document.getElementById("quantity").value;
 // regex 
 /* let regexName = /^\D{2,}$/; */
 /* let regexEmail = /^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]­{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$/; */
-let regexBirthdate = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/
+/* let regexBirthdate = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/ */
 let regexQuantity= /^\d{1,2}$/;
 
 //test regex
 /* let testFirst = regexName.test(document.getElementById("first").value)
 let testLast = regexName.test(document.getElementById("last").value) */
 /* let testEmail = regexEmail.test(emailAdress) */
-let testBirthdate = regexBirthdate.test(birthDate)
+/* let testBirthdate = regexBirthdate.test(birthDate) */
 let testQuantity = regexQuantity.test(numberOfEvents)
 
 // listen for changes 
@@ -73,11 +73,13 @@ function validate(){
 	let regexName = /^\D{2,}$/;
   let regexEmail = /^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]­{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$/;
   let regexBirthdate = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/
+  let regexQuantity= /^\d{1,2}$/;
 	let testFirst = regexName.test(document.getElementById("first").value);
   let testLast = regexName.test(document.getElementById("last").value);
   let testEmail = regexEmail.test(document.getElementById("email").value)
   let testBirthdate = regexBirthdate.test(document.getElementById("birthdate").value)
-  
+  let testQuantity = regexQuantity.test(document.getElementById("quantity").value)
+  let testChecked 
 
 
 	if (testFirst == false){
@@ -105,6 +107,13 @@ function validate(){
   }
   else {
     document.getElementById("errorBirthdate").style.display = "none" , document.getElementById("birthdate").style.border = "2px solid green"
+  }
+  if (testQuantity == false){
+    document.getElementById("errorQuantity").innerHTML = "veuillez entrer un nombre valide";
+    document.getElementById("quantity").style.border = "2px solid red";
+  }
+  else {
+    document.getElementById("errorQuantity").style.display = "none" , document.getElementById("quantity").style.border = "2px solid green"
   }
   
 }
