@@ -65,6 +65,7 @@ document.getElementById("email").addEventListener("change", validate)
 document.getElementById("birthdate").addEventListener("change" , validate)
 document.getElementById("quantity").addEventListener("change", validate);
 document.getElementById("checkbox1").addEventListener("change" , validate)
+document.getElementById("submit").addEventListener("onclick" , test)
 
 //validate form fuction 
 
@@ -125,7 +126,9 @@ function validate(){
   if (testFirst == false || testLast == false || testEmail == false || testBirthdate == false || testQuantity == false || checkbox.checked == false){
     return false
   }
-
+  else {return true, alert("test")
+  }
+  
 }
 
  
