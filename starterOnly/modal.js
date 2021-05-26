@@ -122,7 +122,9 @@ function validate(){
     document.getElementById("checkboxRequired").style.display = "none" , document.getElementById("checkbox1").style.border = "2px solid green"
   }
 
-  
+  if (testFirst == false || testLast == false || testEmail == false || testBirthdate == false || testQuantity == false || checkbox.checked == false){
+    return false
+  }
 
 }
 
