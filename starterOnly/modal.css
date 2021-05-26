@@ -629,3 +629,7 @@ font-family: inherit;
   display: block;
   font-size: 16px;
 }
+
+#hamburger {
+  padding-bottom: 7px;
+}
