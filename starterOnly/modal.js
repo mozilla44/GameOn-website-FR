@@ -44,20 +44,6 @@ let emailAdress = document.getElementById("email").value;
 let birthDate = document.getElementById("birthdate").value;
 let numberOfEvents = document.getElementById("quantity").value;
 
-
-// regex 
-/* let regexName = /^\D{2,}$/; */
-/* let regexEmail = /^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]­{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$/; */
-/* let regexBirthdate = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/ */
-/* let regexQuantity= /^\d{1,2}$/; */
-
-//test regex
-/* let testFirst = regexName.test(document.getElementById("first").value)
-let testLast = regexName.test(document.getElementById("last").value) */
-/* let testEmail = regexEmail.test(emailAdress) */
-/* let testBirthdate = regexBirthdate.test(birthDate) */
-/* let testQuantity = regexQuantity.test(numberOfEvents) */
-
 // listen for changes 
 document.getElementById("first").addEventListener("change" , validate);
 document.getElementById("last").addEventListener("change" , validate)
@@ -68,7 +54,6 @@ document.getElementById("checkbox1").addEventListener("change" , validate)
 document.getElementById("submit").addEventListener("onclick" , test)
 
 //validate form fuction 
-
  
 function validate(){
 	let regexName = /^\D{2,}$/;
@@ -124,9 +109,7 @@ function validate(){
   }
 
   if (testFirst == false || testLast == false || testEmail == false || testBirthdate == false || testQuantity == false || checkbox.checked == false){
-    return false
-  }
-  else {return true, alert("test")
+    return false 
   }
   
 }
