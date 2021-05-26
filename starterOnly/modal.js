@@ -112,7 +112,7 @@ function validate(){
     return false
   }
   else {
-    return true
+    return true , document.getElementById("form_success").style.display = "flex", document.getElementById("close_modal").style.zIndex = 101
   }
 }
 
