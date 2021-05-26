@@ -582,7 +582,7 @@ footer {
 }
 
 #form_success {
-  display: flex;
+  
   margin: auto;
   flex-direction: column;
   justify-content: center;
@@ -590,7 +590,7 @@ footer {
   width: 80%;
   height: 100vh;
   position: relative;
-  display: none;
+  display: none
   
 }
 
@@ -623,6 +623,6 @@ font-family: inherit;
 
 .errorMesage {
   color: red;
-  display: none;
+  display: block;
   font-size: 16px;
 }
