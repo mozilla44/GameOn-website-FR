@@ -35,6 +35,7 @@ document.getElementById("close_modal").addEventListener("click" , hideModal)
 // close modal function
 function hideModal(){
   modalbg.style.display = "none";
+  document.getElementById("body").style.overflow = "scroll";
 }
 
 // get input values
@@ -124,8 +125,9 @@ function validate(){
 
  
 //success message 
-function hideSuccess(){
-  document.getElementById("form_success").style.display = "none"
+/* function hideSuccess(){
+  document.getElementById("form_success").style.display = "none",
+  document.getElementById("body").style.backgroundColor = "red"
 }
 
-
+ */
