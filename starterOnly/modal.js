@@ -19,6 +19,7 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
+  window.scrollTo(0,0)
   if (window.matchMedia('(min-width: 751px)').matches){
     modalbg.style.backgroundColor = "white";
   }
