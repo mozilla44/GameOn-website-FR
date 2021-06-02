@@ -112,7 +112,12 @@ function validate(){
     return false
   }
   else {
-    return true , document.getElementById("form_success").style.display = "flex", document.getElementById("close_modal").style.zIndex = 101
+    return true ,
+     document.getElementById("form_success").style.display = "flex",
+     document.getElementById("reserve").style.display = "none",
+     document.getElementById("body").style.overflow = "hidden",
+     document.getElementById("modal_content").style.margin = "auto",
+     document.getElementById("modal_bground").style.display ="flex"
   }
 }
 

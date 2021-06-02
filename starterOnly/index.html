@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans">
 </head>
 
-<body>
+<body id="body">
   <header class="topnav" id="myTopnav">
     <div class="header-logo">
       <img alt="logo" src="Logo.png">
@@ -50,15 +50,12 @@
       </button>
     </section>
 
-    <section class="bground">
-      <div class="content">
-        <div id="form_success">
-          <p id="success_message">Merci ! Votre réservation a été reçue.</p>
-          <button id="close_sucess" onclick="hideModal()">Fermer</button>
-        </div>
+    <section class="bground" id="modal_bground">
+      <div class="content" id="modal_content">
+        
         <span class="close" id="close_modal"></span>
         <div class="modal-body">
-          <form name="reserve" action="index.html" method="get" onsubmit="return validate();">
+          <form name="reserve" id="reserve" action="index.html" method="get" onsubmit="return validate();">
             <div class="formData" id="input_first">
               <label for="first">Prénom</label>
               <input class="text-control" type="text" id="first" name="first" minlength="2">
@@ -129,6 +126,10 @@
             </div>
             <input class="btn-submit button" type="submit" value="C'est parti">
           </form>
+          <div id="form_success">
+            <p id="success_message">Merci ! Votre réservation a été reçue.</p>
+            <button id="close_sucess" onclick="hideModal()">Fermer</button>
+          </div>
         </div>
       </div>
     </section>
