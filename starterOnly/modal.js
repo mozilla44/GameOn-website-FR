@@ -19,6 +19,7 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
+  window.scrollTo(0,0)
   if (window.matchMedia('(min-width: 751px)').matches){
     modalbg.style.backgroundColor = "white";
   }
@@ -35,6 +36,7 @@ document.getElementById("close_modal").addEventListener("click" , hideModal)
 // close modal function
 function hideModal(){
   modalbg.style.display = "none";
+  document.getElementById("body").style.overflow = "scroll";
 }
 
 // get input values
@@ -112,15 +114,21 @@ function validate(){
     return false
   }
   else {
-    return true , document.getElementById("form_success").style.display = "flex", document.getElementById("close_modal").style.zIndex = 101
+    return true ,
+     document.getElementById("form_success").style.display = "flex",
+     document.getElementById("reserve").style.display = "none",
+     document.getElementById("body").style.overflow = "hidden",
+     document.getElementById("modal_content").style.margin = "auto",
+     document.getElementById("modal_bground").style.display ="flex"
   }
 }
 
 
  
 //success message 
-function hideSuccess(){
-  document.getElementById("form_success").style.display = "none"
+/* function hideSuccess(){
+  document.getElementById("form_success").style.display = "none",
+  document.getElementById("body").style.backgroundColor = "red"
 }
 
-
+ */
