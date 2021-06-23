@@ -21,7 +21,7 @@ function launchModal() {
   modalbg.style.display = "block";
   window.scrollTo(0,0)
   if (window.matchMedia('(min-width: 751px)').matches){
-    modalbg.style.backgroundColor = "white";
+    modalbg.style.backgroundColor = "rgba(255, 255, 255, 0.49)";
   }
   if (window.matchMedia('(max-width: 750px)').matches){
     modalbg.style.top = "2em"
