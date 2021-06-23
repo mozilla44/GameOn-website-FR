@@ -58,7 +58,7 @@ document.getElementById("submit").addEventListener("onclick" , test)
 //validate form fuction 
  
 function validate(){
-	let regexName = /^\D{2,}$/;
+	let regexName = /^\S\D{2,}$/;
   let regexEmail = /^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]­{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$/;
   let regexBirthdate = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/
   let regexQuantity= /^\d{1,2}$/;
